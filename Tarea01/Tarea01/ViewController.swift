@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     
-    @IBOutlet weak var emailIn: UILabel!
+    @IBOutlet weak var correoIn: UITextField!
     
     
 
@@ -24,6 +24,17 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
+    @IBAction func calculando(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
 
     func isValidEmail(testStr:String) -> Bool {
         

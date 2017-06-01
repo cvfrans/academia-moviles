@@ -114,6 +114,9 @@
                                                         <color key="value" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="calculando:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QfM-Dw-bKC"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -193,7 +196,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailIn" destination="nFN-rh-34c" id="YLa-jj-52a"/>
+                        <outlet property="correoIn" destination="D1M-wm-VYL" id="a6U-y7-7xC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
