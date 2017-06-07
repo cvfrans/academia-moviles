@@ -14,10 +14,9 @@ class NuevoPaisViewController: UIViewController {
     @IBOutlet weak var nombrePresidenteTxt: UITextField!
     @IBOutlet weak var descripCortaTxt: UITextField!
     @IBOutlet weak var descripLargaTxt: UITextField!
-    @IBOutlet weak var poblacionTxt: UITextField!
-    @IBOutlet weak var imagenBanderaTxt: UITextField!
-    @IBOutlet weak var imagenPresidenteTxt: UITextField!
-    
+    @IBOutlet weak var poblacionTxt: UITextField!    
+    @IBOutlet weak var imagenBanderaImg: UITextField!
+    @IBOutlet weak var imagenPresidenteImg: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +28,15 @@ class NuevoPaisViewController: UIViewController {
         super.didReceiveMemoryWarning()
         
     }
+    
+    @IBAction func obtenerNombreBandera(_ sender: Any) {
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let modalImageVC = storyBoard.instantiateViewController(withIdentifier: "modalImageIdentity") as! UITableViewController
+        self.present(modalImageVC, animated: true, completion: nil)        
+        
+    }
+    
     
 
     /*

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B55E96F1EE8AC420076BA80 /* ModalImageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55E96E1EE8AC420076BA80 /* ModalImageTableViewController.swift */; };
 		8035ADE01EE78CB700C1B2D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8035ADDF1EE78CB700C1B2D1 /* AppDelegate.swift */; };
 		8035ADE21EE78CB700C1B2D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8035ADE11EE78CB700C1B2D1 /* ViewController.swift */; };
 		8035ADE51EE78CB700C1B2D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8035ADE31EE78CB700C1B2D1 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B55E96E1EE8AC420076BA80 /* ModalImageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalImageTableViewController.swift; sourceTree = "<group>"; };
 		8035ADDC1EE78CB700C1B2D1 /* Tarea02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tarea02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8035ADDF1EE78CB700C1B2D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8035ADE11EE78CB700C1B2D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				8035ADE11EE78CB700C1B2D1 /* ViewController.swift */,
 				8035ADFD1EE7D01000C1B2D1 /* LibreriasBD */,
 				8035ADE31EE78CB700C1B2D1 /* Main.storyboard */,
+				2B55E96E1EE8AC420076BA80 /* ModalImageTableViewController.swift */,
 				8035ADF31EE795F900C1B2D1 /* DetallePaisViewController.swift */,
 				8035ADF11EE795D300C1B2D1 /* NuevoPaisViewController.swift */,
 				8035ADE61EE78CB700C1B2D1 /* Assets.xcassets */,
@@ -193,6 +196,7 @@
 				8035AE0F1EE893C400C1B2D1 /* Pais.swift in Sources */,
 				8035ADF41EE795F900C1B2D1 /* DetallePaisViewController.swift in Sources */,
 				8035ADE01EE78CB700C1B2D1 /* AppDelegate.swift in Sources */,
+				2B55E96F1EE8AC420076BA80 /* ModalImageTableViewController.swift in Sources */,
 				8035AE0B1EE86F3F00C1B2D1 /* PaisesTableViewCellController.swift in Sources */,
 				8035ADF21EE795D300C1B2D1 /* NuevoPaisViewController.swift in Sources */,
 			);

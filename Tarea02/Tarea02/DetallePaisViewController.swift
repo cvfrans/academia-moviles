@@ -26,6 +26,12 @@ class DetallePaisViewController: UIViewController {
 
         if let paisModel = paisModelParam {
             nombrePaisLbl.text = paisModel.nombrePais
+            nomPresidenteLbl.text = paisModel.nombrePresidente
+            descripCortaLbl.text = paisModel.descripCorta
+            descripLargaLbl.text = paisModel.descripLarga
+            poblacionLbl.text = paisModel.poblacion
+            imagenPresidenteImg.image = UIImage(named: paisModel.presidenteImg)
+            imagenBanderaImg.image = UIImage(named: paisModel.banderaImg)
         }
     }
 
