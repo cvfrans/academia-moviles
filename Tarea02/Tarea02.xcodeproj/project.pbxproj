@@ -15,6 +15,10 @@
 		8035ADF21EE795D300C1B2D1 /* NuevoPaisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8035ADF11EE795D300C1B2D1 /* NuevoPaisViewController.swift */; };
 		8035ADF41EE795F900C1B2D1 /* DetallePaisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8035ADF31EE795F900C1B2D1 /* DetallePaisViewController.swift */; };
 		8035ADFC1EE7D00000C1B2D1 /* DataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8035ADFB1EE7D00000C1B2D1 /* DataBase.m */; };
+		8035AE001EE8540500C1B2D1 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8035ADFF1EE8540500C1B2D1 /* libsqlite3.tbd */; };
+		8035AE0B1EE86F3F00C1B2D1 /* PaisesTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8035AE0A1EE86F3F00C1B2D1 /* PaisesTableViewCellController.swift */; };
+		8035AE0D1EE8832E00C1B2D1 /* paisesBD.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 8035AE0C1EE8832E00C1B2D1 /* paisesBD.sqlite */; };
+		8035AE0F1EE893C400C1B2D1 /* Pais.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8035AE0E1EE893C400C1B2D1 /* Pais.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		8035ADF91EE7CFFF00C1B2D1 /* Tarea02-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tarea02-Bridging-Header.h"; sourceTree = "<group>"; };
 		8035ADFA1EE7D00000C1B2D1 /* DataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataBase.h; path = libreriasBD/DataBase.h; sourceTree = "<group>"; };
 		8035ADFB1EE7D00000C1B2D1 /* DataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataBase.m; path = libreriasBD/DataBase.m; sourceTree = "<group>"; };
+		8035ADFF1EE8540500C1B2D1 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		8035AE0A1EE86F3F00C1B2D1 /* PaisesTableViewCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaisesTableViewCellController.swift; sourceTree = "<group>"; };
+		8035AE0C1EE8832E00C1B2D1 /* paisesBD.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = paisesBD.sqlite; path = libreriasBD/paisesBD.sqlite; sourceTree = "<group>"; };
+		8035AE0E1EE893C400C1B2D1 /* Pais.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pais.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8035AE001EE8540500C1B2D1 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +57,7 @@
 			children = (
 				8035ADDE1EE78CB700C1B2D1 /* Tarea02 */,
 				8035ADDD1EE78CB700C1B2D1 /* Products */,
+				8035ADFE1EE8540500C1B2D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +82,8 @@
 				8035ADE81EE78CB700C1B2D1 /* LaunchScreen.storyboard */,
 				8035ADEB1EE78CB700C1B2D1 /* Info.plist */,
 				8035ADF91EE7CFFF00C1B2D1 /* Tarea02-Bridging-Header.h */,
+				8035AE0A1EE86F3F00C1B2D1 /* PaisesTableViewCellController.swift */,
+				8035AE101EE893CD00C1B2D1 /* Model */,
 			);
 			path = Tarea02;
 			sourceTree = "<group>";
@@ -79,10 +91,27 @@
 		8035ADFD1EE7D01000C1B2D1 /* LibreriasBD */ = {
 			isa = PBXGroup;
 			children = (
+				8035AE0C1EE8832E00C1B2D1 /* paisesBD.sqlite */,
 				8035ADFA1EE7D00000C1B2D1 /* DataBase.h */,
 				8035ADFB1EE7D00000C1B2D1 /* DataBase.m */,
 			);
 			name = LibreriasBD;
+			sourceTree = "<group>";
+		};
+		8035ADFE1EE8540500C1B2D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8035ADFF1EE8540500C1B2D1 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8035AE101EE893CD00C1B2D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8035AE0E1EE893C400C1B2D1 /* Pais.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +176,7 @@
 			files = (
 				8035ADEA1EE78CB700C1B2D1 /* LaunchScreen.storyboard in Resources */,
 				8035ADE71EE78CB700C1B2D1 /* Assets.xcassets in Resources */,
+				8035AE0D1EE8832E00C1B2D1 /* paisesBD.sqlite in Resources */,
 				8035ADE51EE78CB700C1B2D1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,8 +190,10 @@
 			files = (
 				8035ADE21EE78CB700C1B2D1 /* ViewController.swift in Sources */,
 				8035ADFC1EE7D00000C1B2D1 /* DataBase.m in Sources */,
+				8035AE0F1EE893C400C1B2D1 /* Pais.swift in Sources */,
 				8035ADF41EE795F900C1B2D1 /* DetallePaisViewController.swift in Sources */,
 				8035ADE01EE78CB700C1B2D1 /* AppDelegate.swift in Sources */,
+				8035AE0B1EE86F3F00C1B2D1 /* PaisesTableViewCellController.swift in Sources */,
 				8035ADF21EE795D300C1B2D1 /* NuevoPaisViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +363,7 @@
 				8035ADF01EE78CB700C1B2D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

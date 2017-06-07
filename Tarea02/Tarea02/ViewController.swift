@@ -11,9 +11,17 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let paises = ["Bolivia","Ecuador","Paraguay"]
+    
+    var paisesArray = [[String:String]]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        let objDAO = DataBase()
+        paisesArray = objDAO.ejecutarSelect("select * from paises") as! [[String:String]]
+        print(paisesArray)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,13 +34,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return paises.count
+        return paisesArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "celdaPaises", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "celdaPaises", for: indexPath) as! PaisesTableViewCellController
         
-        cell.textLabel?.text = paises[indexPath.row]
+        let nombrePais = paisesArray[indexPath.row]["nombre_pais"]
+        let imagen = paisesArray[indexPath.row]["bandera_img"]
+        
+        cell.nombrePaisLbl.text = nombrePais
+        cell.paisImage.image = UIImage(named: imagen!)
+        
         return cell
     }
 

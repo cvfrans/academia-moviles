@@ -9,16 +9,25 @@
 import UIKit
 
 class NuevoPaisViewController: UIViewController {
-
+    
+    @IBOutlet weak var nomPaisTxt: UITextField!
+    @IBOutlet weak var nombrePresidenteTxt: UITextField!
+    @IBOutlet weak var descripCortaTxt: UITextField!
+    @IBOutlet weak var descripLargaTxt: UITextField!
+    @IBOutlet weak var poblacionTxt: UITextField!
+    @IBOutlet weak var imagenBanderaTxt: UITextField!
+    @IBOutlet weak var imagenPresidenteTxt: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
 

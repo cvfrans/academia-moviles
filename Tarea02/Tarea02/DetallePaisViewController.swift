@@ -10,6 +10,7 @@ import UIKit
 
 class DetallePaisViewController: UIViewController {
 
+    var paisModelParam: Pais?
     
     @IBOutlet weak var nombrePaisLbl: UILabel!
     @IBOutlet weak var nomPresidenteLbl: UILabel!
@@ -23,7 +24,9 @@ class DetallePaisViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let paisModel = paisModelParam {
+            nombrePaisLbl.text = paisModel.nombrePais
+        }
     }
 
     override func didReceiveMemoryWarning() {

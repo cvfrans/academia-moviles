@@ -8,7 +8,7 @@
 
 #import "DataBase.h"
 #import <sqlite3.h>
-#define DATABASE_NAME @"restaurant.sqlite"
+#define DATABASE_NAME @"paisesBD.sqlite"
 
 @interface DataBase()
 @property (readonly,nonatomic)sqlite3 *base;
