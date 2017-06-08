@@ -22,7 +22,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let objDAO = DataBase()
         paisesArray = objDAO.ejecutarSelect("select * from paises") as! [[String:String]]
-        print(paisesArray)
         
     }
 

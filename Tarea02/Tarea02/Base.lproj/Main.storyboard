@@ -372,6 +372,9 @@
                                                 <state key="normal" title="Guardar">
                                                     <color key="titleColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="guardarPais:" destination="4ri-OC-WOq" eventType="touchUpInside" id="ZPG-Ke-MCU"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otH-DQ-6wz">
                                                 <rect key="frame" x="265" y="276" width="48" height="29"/>
@@ -391,6 +394,9 @@
                                                 <state key="normal" title="...">
                                                     <color key="titleColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="obtenerNombrePresidente:" destination="4ri-OC-WOq" eventType="touchUpInside" id="310-XS-6oL"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bld-1D-NoT">
                                                 <rect key="frame" x="133" y="312" width="124" height="30"/>
@@ -428,14 +434,19 @@
         <!--Modal Image Table View Controller-->
         <scene sceneID="SwW-hG-wyR">
             <objects>
-                <tableViewController storyboardIdentifier="modalImageIdentity" id="oqd-dS-2Vq" customClass="modalImageTableViewController" customModule="Tarea02" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="modalImageIdentity" id="oqd-dS-2Vq" customClass="ModalImageTableViewController" customModule="Tarea02" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="106" sectionHeaderHeight="28" sectionFooterHeight="28" id="WQg-Vb-cKf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="xOP-zu-6N4">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaModalBandera" rowHeight="106" id="d5N-hh-gxe">
-                                <rect key="frame" x="0.0" y="28" width="375" height="106"/>
+                                <rect key="frame" x="0.0" y="89" width="375" height="106"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d5N-hh-gxe" id="PX2-g7-NP1">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="106"/>
@@ -450,10 +461,12 @@
                                         </imageView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="ms3-sd-ybo" firstAttribute="centerX" secondItem="PX2-g7-NP1" secondAttribute="centerX" id="8lm-aS-PWt"/>
                                         <constraint firstItem="ms3-sd-ybo" firstAttribute="top" secondItem="PX2-g7-NP1" secondAttribute="topMargin" constant="4" id="8z8-0v-okB"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="ms3-sd-ybo" secondAttribute="trailing" constant="116" id="cSx-uQ-8N0"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="ms3-sd-ybo" secondAttribute="bottom" constant="4.5" id="dBx-9K-upO"/>
                                         <constraint firstItem="ms3-sd-ybo" firstAttribute="leading" secondItem="PX2-g7-NP1" secondAttribute="leadingMargin" constant="115" id="gGd-j0-Gwe"/>
+                                        <constraint firstItem="ms3-sd-ybo" firstAttribute="centerY" secondItem="PX2-g7-NP1" secondAttribute="centerY" id="oQD-a4-zn6"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>

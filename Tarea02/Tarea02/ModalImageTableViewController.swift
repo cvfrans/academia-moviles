@@ -8,18 +8,20 @@
 
 import UIKit
 
-class modalImageTableViewController: UITableViewController {
+protocol ModalViewControllerDelegate
+{
+    func saveImagePath( imagePath : String)
+}
 
-    let arrayPaises = ["peru", "argentina", "bolivia", "brasil", "chile", "colombia", "ecuador", "guyana", "paraguay", "surinam", "uruguay", "venezuela"]
+class ModalImageTableViewController: UITableViewController {
+
+    var delegateModal: ModalViewControllerDelegate?
+    
+    var arrayImagen: [String]?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         
         
@@ -37,25 +39,22 @@ class modalImageTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayPaises.count
+        return (arrayImagen?.count)!
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celdaModalBandera", for: indexPath)
 
-        let bandera = arrayPaises[indexPath.row]
-        cell.imageView?.image = UIImage(named: bandera)
+        let bandera = arrayImagen?[indexPath.row]
+        cell.imageView?.image = UIImage(named: bandera!)
 
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        self.dismiss(animated: true, completion: {()-> Void in
-            let nuevoVC: NuevoPaisViewController  = self.storyboard?.instantiateViewController(withIdentifier: "nuevoPaisIdentity") as! NuevoPaisViewController
-            nuevoVC.imagenBanderaImg.text = self.arrayPaises[indexPath.row]
-            
-        })
+        let pathName = self.arrayImagen?[indexPath.row]
+        delegateModal?.saveImagePath(imagePath: pathName!)
+        self.dismiss(animated: true, completion: nil)
         print(indexPath.row)
     }
 
