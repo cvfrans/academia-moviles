@@ -34,8 +34,7 @@ class DetallePaisViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        print("Cargar detalle... \(PaisService.shared.pais.nombrePais)")
+    override func viewDidAppear(_ animated: Bool) {        
         cargarPais(paisDetalleEdicion: PaisService.shared.pais)
     }
     

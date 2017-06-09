@@ -19,7 +19,7 @@ class NuevoPaisViewController: UIViewController, ModalViewControllerDelegate {
     @IBOutlet weak var imagenPresidenteImg: UITextField!
     
     let arrayPaises = ["peru", "argentina", "bolivia", "brasil", "chile", "colombia", "ecuador", "guyana", "paraguay", "surinam", "uruguay", "venezuela"]
-    let arrayPresidentes = ["pedro_pablo_kuczynski","mauricio_acri", "evo_morales_ayma"]
+    let arrayPresidentes = ["pedro_pablo_kuczynski","mauricio_acri", "evo_morales_ayma", "michel_temer", "juan_manuel_santos", "lenin_moreno"]
     let TIPO_MODAL_BANDERA : Int = 1
     let TIPO_MODAL_PRESIDENTE : Int = 2
     
