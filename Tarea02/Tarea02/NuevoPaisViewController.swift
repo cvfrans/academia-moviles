@@ -27,11 +27,21 @@ class NuevoPaisViewController: UIViewController, ModalViewControllerDelegate {
     var modalImageVC = ModalImageTableViewController()
     
     var tipoModal : Int = 0
-    
-    let objDAO = DataBase()
+        
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let paisService = PaisService.shared.pais
+        if paisService.id > 0 {
+            nomPaisTxt.text = paisService.nombrePais
+            nombrePresidenteTxt.text = paisService.nombrePresidente
+            descripCortaTxt.text = paisService.descripCorta
+            descripLargaTxt.text = paisService.descripLarga
+            poblacionTxt.text = paisService.poblacion
+            imagenBanderaImg.text = paisService.banderaImg
+            imagenPresidenteImg.text = paisService.presidenteImg
+        }
         
         
     }
@@ -63,8 +73,30 @@ class NuevoPaisViewController: UIViewController, ModalViewControllerDelegate {
     }
     
     @IBAction func guardarPais(_ sender: Any) {
+        let paisModel = Pais()
+        paisModel.nombrePais = nomPaisTxt.text!
+        paisModel.nombrePresidente = nombrePresidenteTxt.text!
+        paisModel.descripCorta = descripCortaTxt.text!
+        paisModel.descripLarga = descripLargaTxt.text!
+        paisModel.poblacion = poblacionTxt.text!
+        paisModel.banderaImg = imagenBanderaImg.text!
+        paisModel.presidenteImg = imagenPresidenteImg.text!
         
-        objDAO.ejecutarInsert("")
+        if PaisService.shared.pais.id > 0 {
+            paisModel.id = PaisService.shared.pais.id
+            PaisService.shared.actualizarPais(paisModel: paisModel)
+            PaisService.shared.pais = paisModel
+        } else {
+            PaisService.shared.guardarPais(paisModel: paisModel)
+        }
+        
+        
+        let alert = UIAlertController(title: "Transacción", message: "Se guardo correctamente.", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.default, handler: {(action : UIAlertAction) in
+            self.detailSegueToReturnBack()
+        }))
+        self.present(alert, animated: true, completion: nil)
+        
     }
     
     
@@ -77,15 +109,13 @@ class NuevoPaisViewController: UIViewController, ModalViewControllerDelegate {
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func detailSegueToReturnBack()  {
+        if let nav = self.navigationController {
+            nav.popViewController(animated: true)
+        } else {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
-    */
+
 
 }

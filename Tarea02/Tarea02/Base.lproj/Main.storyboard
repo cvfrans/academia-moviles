@@ -230,6 +230,9 @@
                                         <state key="normal" title="Eliminar">
                                             <color key="titleColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="eliminarPais:" destination="tWh-YO-TLc" eventType="touchUpInside" id="XGf-N9-adC"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.69724039452229336" green="0.80525720189423489" blue="0.83012769670050757" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -501,6 +504,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="azb-PD-Sen"/>
+        <segue reference="zdw-ii-3WK"/>
     </inferredMetricsTieBreakers>
 </document>
